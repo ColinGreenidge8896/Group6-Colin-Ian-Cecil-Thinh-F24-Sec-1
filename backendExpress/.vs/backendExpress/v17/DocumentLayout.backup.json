@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 23,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,6 +107,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:14:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\app.js",
+              "RelativeDocumentMoniker": "backendExpress\\app.js",
+              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\app.js",
+              "RelativeToolTip": "backendExpress\\app.js",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T01:12:06.321Z",
+              "EditorCaption": ""
             }
           ]
         }
