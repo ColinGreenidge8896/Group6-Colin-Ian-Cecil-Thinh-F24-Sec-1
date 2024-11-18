@@ -43,3 +43,74 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+function handlePermission() {
+    navigator.permissions.query({ name: "geolocation" }).then((result) => {
+        if (result.state === "granted") {
+            report(result.state);
+            geoBtn.style.display = "none";
+        } else if (result.state === "prompt") {
+            report(result.state);
+            geoBtn.style.display = "none";
+            navigator.geolocation.getCurrentPosition(
+                revealPosition,
+                positionDenied,
+                geoSettings,
+            );
+        } else if (result.state === "denied") {
+            report(result.state);
+            geoBtn.style.display = "inline";
+        } else {
+            console.log('Broken');
+        }
+        result.addEventListener("change", () => {
+            report(result.state);
+        });
+    });
+}
+
+function report(state) {
+    console.log(`Permission ${state}`);
+}
+function getLocation() {
+    handlePermission()
+    navigator.geolocation.getCurrentPosition(successfulGetLocation);
+}
+
+function successfulGetLocation(/*GeolocationPosition*/ position) {
+    const coordinates = position.coords;
+    console.log("Test success. Coordinates: ");
+    console.log(`Latitude : ${coordinates.latitude}`);
+    console.log(`Longitude : ${coordinates.longitude}`);
+}
+
+const speedLimitApiUrl = 'https://roads.googleapis.com/v1/speedLimits?path=';
+const apiKey = '&key=YOUR_API_KEY';
+
+function getSpeedLimit(path) {
+    // unfinished
+    // example of var passed: path = '38.75807927603043,-9.03741754643809';
+    fetch(speedLimitApiUrl + path + apiKey).then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+        .then(data => {
+            const speedLimit = data.speedLimits.speedLimit
+            console.log(data);
+            console.log(speedLimit);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+if ('geolocation' in navigator) {
+    console.log('Geolocation is Available');
+    getLocation();
+} else {
+    console.log('Geolocation is NOT Available');
+    getLocation();
+}
