@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,13 +114,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "index.pug",
               "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug",
               "RelativeDocumentMoniker": "backendExpress\\views\\index.pug",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug*",
-              "RelativeToolTip": "backendExpress\\views\\index.pug*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug",
+              "RelativeToolTip": "backendExpress\\views\\index.pug",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-11-12T02:00:18.303Z",
               "EditorCaption": ""
@@ -135,18 +135,17 @@
               "RelativeToolTip": "backendExpress\\routes\\users.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-12T01:47:38.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T01:47:38.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "index.js",
               "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
               "RelativeDocumentMoniker": "backendExpress\\routes\\index.js",
               "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
               "RelativeToolTip": "backendExpress\\routes\\index.js",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwB4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-11-12T01:47:34.246Z",
               "EditorCaption": ""
@@ -173,8 +172,7 @@
               "RelativeToolTip": "backendExpress\\app.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-12T01:12:06.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T01:12:06.321Z"
             }
           ]
         }

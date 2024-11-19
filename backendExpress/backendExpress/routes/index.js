@@ -29,9 +29,19 @@ function getSpeedLimit(path) {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+
+    // renders pug file and sends the data var to it
+    res.render('index', { data: 'Test' });
+
+
     
-    res.render('index', { title: "Express" });
-    
+    // runs every 10000 milliseconds
+    /*
+    setInterval(function () {
+
+    }, 10000); 
+    */
 });
 
 module.exports = router;
+
