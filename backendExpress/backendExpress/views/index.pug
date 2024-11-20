@@ -4,10 +4,50 @@ p Please work
 p=data
 //- this will retrieve a set of coordinates. however it is in the console
 //- of the web page that pops up
+
 script.
-  const successfulGetLocation = (position) => {
-  console.log('pos = ', position);
-  console.log('lat = ', position.coords.latitude);
-  console.log('long = ', position.coords.longitude);
-  };
-  navigator.geolocation.getCurrentPosition(successfulGetLocation)
+	//- a sleep function for checkSpeed()
+	const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+	var currentLocationLat;
+	var currentLocationLong;
+	function successfulGetLocation(position) {
+		console.log('pos = ', position);
+		console.log('lat = ', position.coords.latitude);
+		console.log('long = ', position.coords.longitude);
+		currentLocationLat = position.coords.latitude;
+		currentLocationLong = position.coords.longitude;
+	};
+
+	function getLocation() {
+		navigator.geolocation.getCurrentPosition(successfulGetLocation)
+	}
+	//- call for testing purposes
+	getLocation();
+
+	async function checkSpeed() {
+		//- 0.009 degrees == about 1 km
+		const kilometersPerDegree = 0.009
+		getLocation(successfulGetLocation);
+		//- prevents code advancing before the vars get updated
+		await sleep(1000);
+		var lastLocationLat = currentLocationLat;
+		var lastLocationLong = currentLocationLong;
+		//- waits 9 more seconds for speed calculation purposes
+		await sleep(9000);
+		getLocation(successfulGetLocation);
+		//- additional wait for vars to update
+		await sleep(1000);
+		//- rough conversion to km
+		var x1 = lastLocationLat/kilometersPerDegree;
+		var x2 = currentLocationLat/kilometersPerDegree;
+		var y1 = lastLocationLong/kilometersPerDegree;
+		var y2 = currentLocationLong/kilometersPerDegree;
+		//- calculates distance
+		var distance = Math.sqrt((x1 - x2)^2 + (y1 - y2)^2);
+		//- converts difference in distance of 10 seconds to km/h
+		var speed = (distance/10)*3600;
+		
+		console.log("Speed = ", speed, 'km/h');
+	}
+	//- call for testing purposes
+	checkSpeed();

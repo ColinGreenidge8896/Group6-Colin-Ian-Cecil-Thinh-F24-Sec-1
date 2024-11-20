@@ -26,6 +26,14 @@ function getSpeedLimit(path) {
 }
 
 
+//function successfulGetLocation (position) {
+//    console.log('pos = ', position);
+//    console.log('lat = ', position.coords.latitude);
+//    console.log('long = ', position.coords.longitude);
+//};
+//function getLocation() {
+//    navigator.geolocation.getCurrentPosition(successfulGetLocation)
+//}
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
