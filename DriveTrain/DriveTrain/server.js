@@ -1,6 +1,18 @@
 'use strict';
+/*const { exec } = require('child_process');*/
 var path = require('path');
 var express = require('express');
+
+//// Start the backend server
+//exec('cd backend && node index.js', (err, stdout, stderr) => {
+//    if (err) {node indcd ex.js', (err, stdout, stderr) => {
+//    if (err) {
+//        console.error(`Error: ${err}`);
+//        return;
+//    }
+//    console.log(`Backend Output: ${stdout}`);
+//    console.error(`Backend Error Output: ${stderr}`);
+//});
 
 var app = express();
 
