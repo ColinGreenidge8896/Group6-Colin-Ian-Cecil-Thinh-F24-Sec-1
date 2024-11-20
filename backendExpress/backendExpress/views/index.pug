@@ -43,7 +43,7 @@ script.
 		var y1 = lastLocationLong/kilometersPerDegree;
 		var y2 = currentLocationLong/kilometersPerDegree;
 		//- calculates distance
-		var distance = Math.sqrt((x1 - x2)^2 + (y1 - y2)^2);
+		var distance = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
 		//- converts difference in distance of 10 seconds to km/h
 		var speed = (distance/10)*3600;
 		
