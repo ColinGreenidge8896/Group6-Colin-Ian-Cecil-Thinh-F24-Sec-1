@@ -1,0 +1,27 @@
+{
+  "name": "drive-train",
+  "version": "0.0.0",
+  "description": "DriveTrain",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "axios": "^1.7.7",
+    "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "libnpmexec": "^9.0.0",
+    "mysql": "^2.18.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
