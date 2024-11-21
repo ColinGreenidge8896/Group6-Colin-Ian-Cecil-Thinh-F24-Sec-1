@@ -24,32 +24,6 @@ script.
 	//- call for testing purposes
 	getLocation();
 
-	async function checkSpeed() {
-		//- 0.009 degrees == about 1 km
-		const kilometersPerDegree = 0.009
-		getLocation(successfulGetLocation);
-		//- prevents code advancing before the vars get updated
-		await sleep(1000);
-		var lastLocationLat = currentLocationLat;
-		var lastLocationLong = currentLocationLong;
-		//- waits 9 more seconds for speed calculation purposes
-		await sleep(9000);
-		getLocation(successfulGetLocation);
-		//- additional wait for vars to update
-		await sleep(1000);
-		//- rough conversion to km
-		var x1 = lastLocationLat/kilometersPerDegree;
-		var x2 = currentLocationLat/kilometersPerDegree;
-		var y1 = lastLocationLong/kilometersPerDegree;
-		var y2 = currentLocationLong/kilometersPerDegree;
-		//- calculates distance
-		var distance = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
-		//- converts difference in distance of 10 seconds to km/h
-		var speed = (distance/10)*3600;
-		
-		console.log("Speed = ", speed, 'km/h');
-	}
-
 	async function getSpeed() {
 		//- 0.009 degrees == about 1 km
 		const kilometersPerDegree = 0.009;
