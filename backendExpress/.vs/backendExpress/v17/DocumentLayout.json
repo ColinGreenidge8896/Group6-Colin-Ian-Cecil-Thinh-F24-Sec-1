@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\",
+  "WorkspaceRootPath": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\evely\\source\\repos\\group6f24\\backendexpress\\backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\evely\\source\\repos\\group6f24\\backendexpress\\backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\evely\\source\\repos\\group6f24\\backendexpress\\backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\evely\\source\\repos\\group6f24\\backendexpress\\backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\ian\\documents\\github\\group6f24\\backendexpress\\backendexpress\\bin\\www||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\evely\\source\\repos\\group6f24\\backendexpress\\backendexpress\\bin\\www||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\bin\\www||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -30,8 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 31,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -42,19 +106,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -63,10 +115,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -102,10 +150,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -116,11 +160,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "index.pug",
-              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug",
+              "DocumentMoniker": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug",
               "RelativeDocumentMoniker": "backendExpress\\views\\index.pug",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug*",
-              "RelativeToolTip": "backendExpress\\views\\index.pug*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC0AAAAHAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\views\\index.pug",
+              "RelativeToolTip": "backendExpress\\views\\index.pug",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAE0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-11-20T04:30:55.634Z",
               "EditorCaption": ""
@@ -129,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "users.js",
-              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\users.js",
+              "DocumentMoniker": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\routes\\users.js",
               "RelativeDocumentMoniker": "backendExpress\\routes\\users.js",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\users.js",
+              "ToolTip": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\routes\\users.js",
               "RelativeToolTip": "backendExpress\\routes\\users.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -141,9 +185,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "index.js",
-              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
+              "DocumentMoniker": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
               "RelativeDocumentMoniker": "backendExpress\\routes\\index.js",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
+              "ToolTip": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\routes\\index.js",
               "RelativeToolTip": "backendExpress\\routes\\index.js",
               "ViewState": "AgIAACMAAAAAAAAAAAAAwBkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -153,9 +197,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "www",
-              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\bin\\www",
+              "DocumentMoniker": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\bin\\www",
               "RelativeDocumentMoniker": "backendExpress\\bin\\www",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\bin\\www",
+              "ToolTip": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\bin\\www",
               "RelativeToolTip": "backendExpress\\bin\\www",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -165,9 +209,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\app.js",
+              "DocumentMoniker": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\app.js",
               "RelativeDocumentMoniker": "backendExpress\\app.js",
-              "ToolTip": "C:\\Users\\Ian\\Documents\\GitHub\\Group6F24\\backendExpress\\backendExpress\\app.js",
+              "ToolTip": "C:\\Users\\Evely\\source\\repos\\Group6F24\\backendExpress\\backendExpress\\app.js",
               "RelativeToolTip": "backendExpress\\app.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
