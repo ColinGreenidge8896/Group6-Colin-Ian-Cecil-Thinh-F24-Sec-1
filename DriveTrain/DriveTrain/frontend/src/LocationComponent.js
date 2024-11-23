@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import SpeedAndAccelerationComponent from './SpeedAndAccelerationComponent';
 
 const LocationComponent = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null });
+    const [simulatedLocation, setSimulatedLocation] = useState({ latitude: null, longitude: null });
 
     const getLocation = () => {
         if (navigator.geolocation) {
@@ -19,6 +21,27 @@ const LocationComponent = () => {
         }
     };
 
+    const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+
+    const simulateLocationChange = async () => {
+        const simulatedLocations = [
+            { latitude: 37.7749, longitude: -122.4194 }, // San Francisco
+            { latitude: 37.7749, longitude: -122.4284 }, // Slightly north-east
+            { latitude: 37.7749, longitude: -122.4374 }, // Further north-east
+            // Add more locations as needed
+        ];
+
+        for (let i = 0; i < simulatedLocations.length; i++) {
+            setSimulatedLocation(simulatedLocations[i]);
+            await sleep(10000); // Wait for 10 seconds before updating to the next location
+        }
+    };
+
+    useEffect(() => {
+        getLocation();
+        simulateLocationChange();
+    }, []);
+
     return (
         <div>
             <h1>User Location</h1>
@@ -29,6 +52,7 @@ const LocationComponent = () => {
                     <p>Longitude: {location.longitude}</p>
                 </div>
             )}
+            <SpeedAndAccelerationComponent currentLocation={simulatedLocation} />
         </div>
     );
 };
