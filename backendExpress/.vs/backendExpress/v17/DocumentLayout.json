@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\owner\\onedrive\\documents\\github\\group6-colin-ian-cecil-thinh-f24-sec-1\\backendexpress\\backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\views\\index.pug||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\owner\\onedrive\\documents\\github\\group6-colin-ian-cecil-thinh-f24-sec-1\\backendexpress\\backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\routes\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\owner\\onedrive\\documents\\github\\group6-colin-ian-cecil-thinh-f24-sec-1\\backendexpress\\backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\routes\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\owner\\onedrive\\documents\\github\\group6-colin-ian-cecil-thinh-f24-sec-1\\backendexpress\\backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|c:\\users\\owner\\onedrive\\documents\\github\\group6-colin-ian-cecil-thinh-f24-sec-1\\backendexpress\\backendexpress\\bin\\www||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4761CF17-B483-42A1-B3B8-B3A5CD02CCB4}|backendExpress\\backendExpress.esproj|solutionrelative:backendexpress\\bin\\www||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.pug",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\views\\index.pug",
+              "RelativeDocumentMoniker": "backendExpress\\views\\index.pug",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\views\\index.pug",
+              "RelativeToolTip": "backendExpress\\views\\index.pug",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2024-11-12T02:00:18.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "users.js",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\routes\\users.js",
+              "RelativeDocumentMoniker": "backendExpress\\routes\\users.js",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\routes\\users.js",
+              "RelativeToolTip": "backendExpress\\routes\\users.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T01:47:38.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\routes\\index.js",
+              "RelativeDocumentMoniker": "backendExpress\\routes\\index.js",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\routes\\index.js",
+              "RelativeToolTip": "backendExpress\\routes\\index.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T01:47:34.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "www",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\bin\\www",
+              "RelativeDocumentMoniker": "backendExpress\\bin\\www",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\bin\\www",
+              "RelativeToolTip": "backendExpress\\bin\\www",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-12T01:45:36.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\app.js",
+              "RelativeDocumentMoniker": "backendExpress\\app.js",
+              "ToolTip": "C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\Group6-Colin-Ian-Cecil-Thinh-F24-Sec-1\\backendExpress\\backendExpress\\app.js",
+              "RelativeToolTip": "backendExpress\\app.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-12T01:12:06.321Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
