@@ -17,8 +17,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>{data}</h1>
+      <div>
+          <div className="App">
+              <header className="App-header">
+                  <button className="center-button">Click Me</button>
+              </header>
+              <h1>{data}</h1>
+          </div>
     </div>
   );
 };

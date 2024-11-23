@@ -9,7 +9,8 @@ var router = express.Router();
 // Enable CORS for all routes
 app.use(cors());
 
-//my db config
+//my db config - change to yours!!!
+//find out how to make this config native to the system
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -50,9 +51,9 @@ app.use(express.json());
 // }
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
   path = '38.75807927603043,-9.03741754643809';
-  console.log('path is ' + path);
+    console.log('path is ' + path);
+    res.send('Hello World!');
   // getSpeedLimit(path);
 });
 
