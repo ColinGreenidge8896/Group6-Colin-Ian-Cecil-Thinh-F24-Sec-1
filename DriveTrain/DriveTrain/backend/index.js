@@ -32,9 +32,8 @@ app.use(express.json());
 
 //time to create some app stuff
 app.get('/', (req, res) => {
-  path = '38.75807927603043,-9.03741754643809';
-    console.log('path is ' + path);
-    res.send('Hello World!');
+    console.log('Backend says hi');
+    res.send('Using database: '+ database);
     
 });
 

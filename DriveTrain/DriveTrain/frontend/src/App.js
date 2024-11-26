@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import logo from './logo.svg';
+import logo from './images/drivetrain_logo_small.png';
 import './App.css';
 import LocationComponent from './LocationComponent';
 
@@ -21,7 +21,6 @@ const App = () => {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>Click Me</p>
                 {data}
                 <LocationComponent />
             </header>

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.39fbcb9c.css",
+    "main.js": "/static/js/main.6dd1c63b.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/drivetrain_logo_small.png": "/static/media/drivetrain_logo_small.f34215a4c841fef9c34a.png",
+    "index.html": "/index.html",
+    "main.39fbcb9c.css.map": "/static/css/main.39fbcb9c.css.map",
+    "main.6dd1c63b.js.map": "/static/js/main.6dd1c63b.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39fbcb9c.css",
+    "static/js/main.6dd1c63b.js"
+  ]
+}

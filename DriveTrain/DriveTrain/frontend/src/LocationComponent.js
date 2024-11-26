@@ -52,7 +52,7 @@ const LocationComponent = () => {
                     <p>Longitude: {location.longitude}</p>
                 </div>
             )}
-            <SpeedAndAccelerationComponent currentLocation={simulatedLocation} />
+            <SpeedAndAccelerationComponent currentLocation={location} />
         </div>
     );
 };
