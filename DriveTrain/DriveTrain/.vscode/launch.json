@@ -17,16 +17,16 @@
       "type": "edge",
       "request": "launch",
       "url": "http://localhost:3001",
-      "webRoot": "${workspaceFolder}/public",
-      "preLaunchTask": "run-index"
+      "webRoot": "${workspaceFolder}/public"
+      //"preLaunchTask": "run-index"
     },
     {
       "name": "localhost (Chrome)",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3001",
-      "webRoot": "${workspaceFolder}/public",
-      "preLaunchTask": "run-index"
+      "webRoot": "${workspaceFolder}/public"
+      //"preLaunchTask": "run-index"
     },
     {
       "name": "Debug node process Express Server",
