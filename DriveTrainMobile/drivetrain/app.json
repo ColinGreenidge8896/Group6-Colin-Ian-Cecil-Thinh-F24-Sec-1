@@ -4,7 +4,7 @@
     "slug": "drivetrain",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/drivetrainLogor.png",
+    "icon": "./assets/images/drivetrainLogo.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
