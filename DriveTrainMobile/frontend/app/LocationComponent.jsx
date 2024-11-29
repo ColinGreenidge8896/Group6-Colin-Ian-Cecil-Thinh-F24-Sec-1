@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 //-
 
 var calculatedScore = 100;
-
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 const LocationComponent = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [simulatedLocation, setSimulatedLocation] = useState({ latitude: null, longitude: null });
@@ -61,8 +61,9 @@ const LocationComponent = () => {
         Math.pow((lastLocation.latitude / kilometersPerDegree - currentLocation.latitude / kilometersPerDegree), 2) +
         Math.pow((lastLocation.longitude / kilometersPerDegree - currentLocation.longitude / kilometersPerDegree), 2)
       );
-      const calculatedAcceleration = 2 * (distance - speed) / (time ** 2);
+      const calculatedAcceleration = -2 * (distance - speed * time) / (time ** 2);
       console.log('Acceleration =', calculatedAcceleration, 'km/h/s');
+
       setAcceleration(calculatedAcceleration);
       return calculatedAcceleration;
     }
@@ -77,11 +78,15 @@ const LocationComponent = () => {
     if (acceleration > 0) {
       calculatedScore -= (acceleration - maxAcceleration);
     }
+    if (calculatedScore < 0) {
+      calculatedScore = 0;
+    }
     setScore(calculatedScore);
     return calculatedScore;
   };
 
-  useEffect(() => {
+    useEffect(() => {
+    sleep(10000);
     getLocation();
     //simulateLocationChange();
     if (location.latitude && location.longitude) {
