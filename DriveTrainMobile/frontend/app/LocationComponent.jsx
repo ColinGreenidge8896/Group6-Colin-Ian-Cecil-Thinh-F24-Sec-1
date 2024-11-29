@@ -36,6 +36,8 @@ const LocationComponent = () => {
   const simulateLocationChange = async () => {
     const simulatedLocations = { latitude: location.latitude, longitude: location.longitude + 0.009 };
     setLocation(simulatedLocations);
+
+    getAcceleration(simulatedLocations);
   };
 
   const getSpeed = (lastLocation, currentLocation) => {
@@ -93,20 +95,20 @@ const LocationComponent = () => {
 
   return (
     <div>
-      <h1 color={'white'}>User Location</h1>
+      <h1 style={{ color: 'white' }}>User Location</h1>
       <button onClick={getLocation}>Get Location</button>
       <button onClick={simulateLocationChange}>Simulate Location Change</button>
       {location.latitude && location.longitude && (
         <div>
-          <p>Latitude: {location.latitude}</p>
-          <p>Longitude: {location.longitude}</p>
+          <p style={{ color: 'white' }}>Latitude: {location.latitude}</p>
+          <p style={{ color: 'white' }}>Longitude: {location.longitude}</p>
         </div>
       )}
-      <h1 color={'white'}>Speed and Acceleration</h1>
-      {speed !== null && <p>Speed: {speed} km/h</p>}
-      {acceleration !== null && <p>Acceleration: {acceleration} km/h/s</p>}
-      <h1>Driver Score</h1>
-      {score !== null && <p>Score: {score}</p>}
+      <h1 style={{ color: 'white' }}>Speed and Acceleration</h1>
+      {speed !== null && <p style={{ color: 'white' }}>Speed: {speed} km/h</p>}
+      {acceleration !== null && <p style={{ color: 'white' }}>Acceleration: {acceleration} km/h/s</p>}
+      <h1 style={{ color: 'white' }}>Driver Score</h1>
+      {score !== null && <p style={{ color: 'white' }}>Score: {score}</p>}
     </div>
   );
 };
