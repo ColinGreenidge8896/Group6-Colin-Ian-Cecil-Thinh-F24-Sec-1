@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import LocationComponent from './LocationComponent';
 
@@ -7,6 +7,7 @@ const BACKEND_URL = 'http://10.0.0.250:3001';
 
 const App = () => {
     const [tracking, setTracking] = useState(false);
+    const [driving, setDriving] = useState(false);
     const [locations, setLocations] = useState([]);
     const [speed, setSpeed] = useState(0);
     const [acceleration, setAcceleration] = useState(0);
@@ -68,13 +69,52 @@ const App = () => {
                 console.error('Error:', error);
             });
     };
+    const startDrive = () => {
+        setDriving(true);
+    }
+    const endDrive = () => {
+        setDriving(false);
+        //write to db?
+    }
 
-    return (
-        <View>
-            <Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />
-            <LocationComponent />
-        </View>
-    );
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            justifyContent: 'flex-end', // Adjusts the button position to lower on the screen 
+            alignItems: 'center',
+            paddingBottom: 50, // Adds some padding to move it further up from the bottom edge 
+        },
+        button: {
+            width: 200,
+            paddingVertical: 100,
+            borderRadius: 5,
+        },
+    });
+
+    if (driving) {
+        
+        return (
+            <View>
+                <Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />
+                <View style={styles.container}>
+                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
+                </View>
+
+                <LocationComponent />
+            </View>
+
+        );
+    }
+    else {
+        return (
+            <View>
+                <Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />
+                <View style={styles.container}>
+                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
+                </View>
+            </View>
+        );
+    }
 };
 
 export default App;
