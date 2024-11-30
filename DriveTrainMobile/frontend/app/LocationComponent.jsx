@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 var calculatedScore = 100;
+// change this to change the rate getlocation is called
+// effects the math of getspeed and getacceleration
+const time = 1;
 const LocationComponent = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null });
     const [simulatedLocation, setSimulatedLocation] = useState({ latitude: null, longitude: null });
@@ -49,7 +52,6 @@ const LocationComponent = () => {
             Math.pow((lastLocation.latitude / kilometersPerDegree - currentLocation.latitude / kilometersPerDegree), 2) +
             Math.pow((lastLocation.longitude / kilometersPerDegree - currentLocation.longitude / kilometersPerDegree), 2)
         );
-        const time = 1;
         const calculatedSpeed = (distance / time) * 3600;
         console.log("Speed = ", calculatedSpeed, 'km/h');
         setSpeed(calculatedSpeed);
@@ -59,7 +61,6 @@ const LocationComponent = () => {
     const getAcceleration = (currentLocation) => {
         if (lastLocation && currentLocation) {
             const speed = getSpeed(lastLocation, currentLocation);
-            const time = 1;
             
             const calculatedAcceleration = (speed - prevSpeed)/time;
             console.log('Acceleration =', calculatedAcceleration, 'km/h/s');
@@ -71,7 +72,6 @@ const LocationComponent = () => {
     const calculateScore = () => {
         const speedLimit = 80;
         const maxAcceleration = 20;
-        const time = 1;
         if (speed > speedLimit) {
             calculatedScore -= ((speed - speedLimit) / time);
         }
@@ -89,7 +89,7 @@ const LocationComponent = () => {
         const intervalId = setInterval(() => {
             getLocation();
             //time between getlocation calls
-        }, 1000);
+        }, time*1000);
 
         return () => clearInterval(intervalId);
     }, []);
