@@ -88,6 +88,7 @@ const LocationComponent = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             getLocation();
+            //time between getlocation calls
         }, 1000);
 
         return () => clearInterval(intervalId);
