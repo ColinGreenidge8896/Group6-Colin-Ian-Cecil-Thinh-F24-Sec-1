@@ -54,16 +54,40 @@ const calculateDrivingScore = (locations) => {
   return score;
 };
 
-// Endpoint to receive location data
+// // Endpoint to receive location data
+// app.post('/api/locations', (req, res) => {
+//   const locations = req.body;
+//   // Process the locations to calculate the driving score
+//   const drivingScore = calculateDrivingScore(locations);
+//   // Store the data in the database
+//   const query = 'INSERT INTO driving_data (locations, score) VALUES (?, ?)';
+//   db.query(query, [JSON.stringify(locations), drivingScore], (err, result) => {
+//     if (err) throw err;
+//     res.json({ success: true, score: drivingScore });
+//   });
+// });
+
+/*CREATE TABLE locations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  latitude DECIMAL(9,6),
+  longitude DECIMAL(9,6),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);*/ 
+//what would the insert be?? use db? insert into which table in which order?
+
 app.post('/api/locations', (req, res) => {
-  const locations = req.body;
-  // Process the locations to calculate the driving score
-  const drivingScore = calculateDrivingScore(locations);
-  // Store the data in the database
-  const query = 'INSERT INTO driving_data (locations, score) VALUES (?, ?)';
-  db.query(query, [JSON.stringify(locations), drivingScore], (err, result) => {
-    if (err) throw err;
-    res.json({ success: true, score: drivingScore });
+  const locations = req.body.locations;
+  const query = 'INSERT INTO drivetrain.locations (latitude, longitude) VALUES ?';
+  const values = locations.map((loc) => [loc.latitude, loc.longitude]);
+
+  db.query(query, [values], (err, result) => {
+    if (err) {
+      console.error('Error inserting data:', err);
+      res.status(500).send('Error inserting data');
+    } else {
+      console.log('Data inserted successfully:', result);
+      res.json({ success: true, insertedRows: result.affectedRows });
+    }
   });
 });
 

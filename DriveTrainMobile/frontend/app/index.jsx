@@ -1,120 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { Button, View, Text } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import LocationComponent from './LocationComponent';
-
-const BACKEND_URL = 'http://10.0.0.250:3001';
+import axios from 'axios';
 
 const App = () => {
-    const [tracking, setTracking] = useState(false);
-    const [driving, setDriving] = useState(false);
-    const [locations, setLocations] = useState([]);
-    //const [speed, setSpeed] = useState(0);
-    //const [acceleration, setAcceleration] = useState(0);
+  const [locations, setLocations] = useState([]);
+  const [tracking, setTracking] = useState(false);
+  const [intervalId, setIntervalId] = useState(null);
 
-    useEffect(() => {
-        let watchId;
-        let intervalId;
-        /*
-        if (tracking) {
-            watchId = Geolocation.watchPosition(
-                (position) => {
-                    const { latitude, longitude, speed } = position.coords;
-                    setLocations((prev) => [...prev, { latitude, longitude, speed, timestamp: Date.now() }]);
-                    setSpeed(speed);
-                    // Calculate acceleration here based on speed changes over time
-                },
-                (error) => console.error(error),
-                { enableHighAccuracy: true, distanceFilter: 0 }
-            );
+  useEffect(() => {
+    if (tracking) {
+      const id = setInterval(() => {
+        Geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            setLocations((prevLocations) => [
+              ...prevLocations,
+              { latitude, longitude },
+            ]);
+          },
+          (error) => {
+            console.error(error);
+          },
+          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        );
+      }, 1000); // Collect location every 5 seconds
+      setIntervalId(id);
+    } else if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
 
-        intervalId = setInterval(() => {
-            Geolocation.getCurrentPosition(
-                (position) => {
-                    const { latitude, longitude, speed } = position.coords;
-                    setLocations((prev) => [...prev, { latitude, longitude, speed, timestamp: Date.now() }]);
-                    setSpeed(speed);
-                    // Calculate acceleration here based on speed changes over time
-                },
-                (error) => console.error(error),
-                { enableHighAccuracy: true }
-            );
-        }, 1000);
-        } else {
-            if (watchId) Geolocation.clearWatch(watchId);
-            if (intervalId) clearInterval(intervalId);
-        } */
-        return () => {
-            //if (watchId) Geolocation.clearWatch(watchId);
-            //if (intervalId) clearInterval(intervalId);
-        };
-    }, [tracking]);
-
-    const startTracking = () => setTracking(true);
-    const stopTracking = () => {
-        setTracking(false);
-        fetch(`${BACKEND_URL}/api/locations`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(locations),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Handle the driving score received from the backend
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+    return () => {
+      if (intervalId) clearInterval(intervalId);
     };
-    const startDrive = () => {
-        setDriving(true);
+  }, [tracking]);
+//try 192.168.2.233 -colins IP
+//http://localhost:8081/api/locations
+const sendLocations = async () => {
+    try {
+      const response = await axios.post('http://192.168.2.233:3000/api/locations', {
+        locations,
+      });
+      if (response.data.success) {
+        console.log('Locations saved:', response.data.insertedRows);
+        setLocations([]); // Clear the array after sending
+      } else {
+        console.error('Failed to save locations');
+      }
+    } catch (error) {
+      console.error('Error sending locations:', error);
     }
-    const endDrive = () => {
-        setDriving(false);
-        //write to db?
-    }
+  };
 
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'flex-end', // Adjusts the button position to lower on the screen 
-            alignItems: 'center',
-            paddingBottom: 50, // Adds some padding to move it further up from the bottom edge 
-        },
-        button: {
-            width: 200,
-            paddingVertical: 100,
-            borderRadius: 5,
-        },
-    });
-
-    if (driving) {
-        
-        return (
-            <View>
-                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
-                <View style={styles.container}>
-                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
-                </View>
-
-                <LocationComponent />
-            </View>
-
-        );
-    }
-    else {
-        return (
-            <View>
-                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
-                <View style={styles.container}>
-                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
-                </View>
-            </View>
-        );
-    }
+  return (
+    <View>
+      <Button
+        title={tracking ? "Stop Tracking" : "Start Tracking"}
+        onPress={() => setTracking(!tracking)}
+      />
+      <Button title="Send Locations" onPress={sendLocations} />
+      <Text>{tracking ? "Tracking is ON" : "Tracking is OFF"}</Text>
+    </View>
+  );
 };
 
 export default App;
