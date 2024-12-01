@@ -9,8 +9,8 @@ const App = () => {
     const [tracking, setTracking] = useState(false);
     const [driving, setDriving] = useState(false);
     const [locations, setLocations] = useState([]);
-    const [speed, setSpeed] = useState(0);
-    const [acceleration, setAcceleration] = useState(0);
+    //const [speed, setSpeed] = useState(0);
+    //const [acceleration, setAcceleration] = useState(0);
 
     useEffect(() => {
         let watchId;
@@ -95,7 +95,7 @@ const App = () => {
         
         return (
             <View>
-                <Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />
+                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
                 <View style={styles.container}>
                     <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
                 </View>
@@ -108,7 +108,7 @@ const App = () => {
     else {
         return (
             <View>
-                <Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />
+                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
                 <View style={styles.container}>
                     <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
                 </View>
