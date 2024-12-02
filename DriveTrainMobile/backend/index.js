@@ -72,8 +72,8 @@ app.post('/api/locations', (req, res) => {
   const { tripID, locations } = req.body; // Get tripID and locations from the request body
 
   // SQL query to insert locations
-  const locationQuery = 'INSERT INTO locations (tripID, latitude, longitude, timestamp) VALUES ?';
-  const locationValues = locations.map((loc) => [tripID, loc.latitude, loc.longitude, new Date(loc.timestamp)]);
+  const locationQuery = 'INSERT INTO locations ( latitude, longitude, timestamp) VALUES ?';
+  const locationValues = locations.map((loc) => [loc.latitude, loc.longitude, new Date(loc.timestamp)]);
 
   // Execute the query to insert locations
   db.query(locationQuery, [locationValues], (err, result) => {
