@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, View, Text, StyleSheet } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import axios from 'axios';
+import LocationComponent from './LocationComponent';
 
 const App = () => {
   const [locations, setLocations] = useState([]);
@@ -43,7 +44,7 @@ const App = () => {
 
 const sendLocations = async () => {
   try {
-    const response = await axios.post('http://192.168.2.233:3000/api/locations', {
+      const response = await axios.post('http://192.168.56.1:3000/api/locations', {
       locations,
     });
     if (response.data.success) {
@@ -63,9 +64,10 @@ const sendLocations = async () => {
         title={tracking ? "Stop Tracking" : "Start Tracking"}
         onPress={() => setTracking(!tracking)}
       />
-      <Text style={tracking ? styles.whiteText : styles.blackText}>
+      <Text style={tracking ? styles.whiteText : styles.whiteText}>
         {tracking ? "Tracking is ON" : "Tracking is OFF"}
-      </Text>
+          </Text>
+          <LocationComponent />
     </View>
   );
 };
