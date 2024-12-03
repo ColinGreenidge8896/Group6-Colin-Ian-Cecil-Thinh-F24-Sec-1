@@ -14,7 +14,7 @@ const App = () => {
   const [driving, setDriving] = useState(false);
 
   useEffect(() => {
-    if (tracking) {
+    if (driving) {
       // Start tracking: Set an interval to get the user's location every 5 seconds
       const id = setInterval(() => {
         Geolocation.getCurrentPosition(
@@ -59,7 +59,7 @@ const App = () => {
     return () => {
       if (intervalId) clearInterval(intervalId);
     };
-  }, [tracking]); // Dependency array: Re-run this effect when the tracking state changes
+  }, [driving]); // Dependency array: Re-run this effect when the tracking state changes
 
   // Function to start a new trip
   //MAY HAVE TO CHANGE POST ADDRESS:
@@ -76,20 +76,17 @@ const App = () => {
       console.error('Error starting trip:', error);
     }
   };
-  const startDrive = () => {
+  const startDrive = async () => {
       setDriving(true);
+      const newTripID = await startTrip();
+      setTripID(newTripID);
+
   }
   const endDrive = () => {
       setDriving(false);
       //write to db?
   }
-  const handleTracking = async () => {
-    if (!tracking) {
-      const newTripID = await startTrip();
-      setTripID(newTripID);
-    }
-    setTracking(!tracking);
-  };
+
 
   //MAY HAVE TO CHANGE POST ADDRESS:
   //try 192.168.2.233 -colins IP - http://192.168.2.233:3000/api/locations
@@ -122,13 +119,13 @@ const App = () => {
                 </View>
 
                 <View style={styles.container}>
-                    <Button
-                        title={tracking ? "Stop Tracking" : "Start Tracking"}
-                        onPress={handleTracking} // Ensure handleTracking is called on button press
-                    />
-                    <Text style={tracking ? styles.whiteText : styles.whiteText}>
-                        {tracking ? "Tracking is ON" : "Tracking is OFF"}
-                    </Text>
+                    {/*<Button*/}
+                    {/*    title={tracking ? "Stop Tracking" : "Start Tracking"}*/}
+                    {/*    onPress={handleTracking} // Ensure handleTracking is called on button press*/}
+                    {/*/>*/}
+                    {/*<Text style={tracking ? styles.whiteText : styles.whiteText}>*/}
+                    {/*    {tracking ? "Tracking is ON" : "Tracking is OFF"}*/}
+                    {/*</Text>*/}
                     <LocationComponent />
                 </View>
             </View>
@@ -147,18 +144,18 @@ const App = () => {
     }
 
 
-  return (
-    <View style={styles.container}>
-      <Button
-        title={tracking ? "Stop Tracking" : "Start Tracking"}
-        onPress={handleTracking} // Ensure handleTracking is called on button press
-      />
-      <Text style={tracking ? styles.whiteText : styles.whiteText}>
-        {tracking ? "Tracking is ON" : "Tracking is OFF"}
-          </Text>
-          <LocationComponent />
-    </View>
-  );
+  //return (
+  //  <View style={styles.container}>
+  //    {/*<Button*/}
+  //    {/*  title={tracking ? "Stop Tracking" : "Start Tracking"}*/}
+  //    {/*  onPress={handleTracking} // Ensure handleTracking is called on button press*/}
+  //    {/*/>*/}
+  //    <Text style={tracking ? styles.whiteText : styles.whiteText}>
+  //      {tracking ? "Tracking is ON" : "Tracking is OFF"}
+  //        </Text>
+  //        <LocationComponent />
+  //  </View>
+  //);
 };
 
 
