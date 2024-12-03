@@ -32,13 +32,33 @@ const LocationComponent = () => {
     };
 
     const simulateLocationChange = () => {
-        const simulatedLocations = {
+        const numLocations = 10;
+        const minSpeed = 5; // km/h
+        const maxSpeed = 10; // km/h
+        const simulatedLocations = [];
+      
+        for (let i = 0; i < numLocations; i++) {
+          const randomSpeed = Math.random() * (maxSpeed - minSpeed) + minSpeed; // Random speed between 30 and 60 km/h
+          const distance = (randomSpeed / 3600) * time; // Distance in degrees (since time is in seconds and speed is in km/h)
+          const newLongitude = location.longitude + (distance * kilometersPerDegree);
+      
+          simulatedLocations.push({
             latitude: location.latitude,
-            longitude: location.longitude + kilometersPerDegree / 50,
-        };
-        setLocation(simulatedLocations);
-        getAcceleration(simulatedLocations);
-    };
+            longitude: newLongitude,
+          });
+      
+          // Update location for the next iteration
+          location.longitude = newLongitude;
+        }
+      
+        // Simulate the location changes one after another
+        simulatedLocations.forEach((loc, index) => {
+          setTimeout(() => {
+            setLocation(loc);
+            getAcceleration(loc);
+          }, index * time * 1000); // Delay each update by `time` seconds
+        });
+      };
 
     const getSpeed = (lastLocation, currentLocation) => {
         if (!lastLocation || !currentLocation) return 0;

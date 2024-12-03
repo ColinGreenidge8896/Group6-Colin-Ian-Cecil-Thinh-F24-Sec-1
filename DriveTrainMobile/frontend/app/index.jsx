@@ -67,10 +67,10 @@ const App = () => {
   //http://localhost:8081/api/locations
   const startTrip = async () => {
     try {
-        const userResponse = await axios.post('http://192.168.56.1:3000/api/create-user', { name: 'John Doe', DriverScore: 0 });
+        const userResponse = await axios.post('http://192.168.2.233:3000/api/create-user', { name: 'John Doe', DriverScore: 0 });
       const userID = userResponse.data.userID;
   
-        const tripResponse = await axios.post('http://192.168.56.1:3000/api/start-trip', { userID });
+        const tripResponse = await axios.post('http://192.168.2.233:3000/api/start-trip', { userID });
       return tripResponse.data.tripID;
     } catch (error) {
       console.error('Error starting trip:', error);
@@ -94,7 +94,7 @@ const App = () => {
 
   const sendLocations = async () => {
     try {
-        const response = await axios.post('http://192.168.56.1:3000/api/locations', {
+        const response = await axios.post('http://192.168.2.233:3000/api/locations', {
         tripID,
         locations,
       });
