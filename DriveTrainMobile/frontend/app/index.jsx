@@ -11,6 +11,7 @@ const App = () => {
   const [tracking, setTracking] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const [tripID, setTripID] = useState(null);
+  const [driving, setDriving] = useState(false);
 
   useEffect(() => {
     if (tracking) {
@@ -66,16 +67,22 @@ const App = () => {
   //http://localhost:8081/api/locations
   const startTrip = async () => {
     try {
-      const userResponse = await axios.post('http://192.168.2.233:3000/api/create-user', { name: 'John Doe', DriverScore: 0 });
+        const userResponse = await axios.post('http://192.168.56.1:3000/api/create-user', { name: 'John Doe', DriverScore: 0 });
       const userID = userResponse.data.userID;
   
-      const tripResponse = await axios.post('http://192.168.2.233:3000/api/start-trip', { userID });
+        const tripResponse = await axios.post('http://192.168.56.1:3000/api/start-trip', { userID });
       return tripResponse.data.tripID;
     } catch (error) {
       console.error('Error starting trip:', error);
     }
   };
-
+  const startDrive = () => {
+      setDriving(true);
+  }
+  const endDrive = () => {
+      setDriving(false);
+      //write to db?
+  }
   const handleTracking = async () => {
     if (!tracking) {
       const newTripID = await startTrip();
@@ -90,7 +97,7 @@ const App = () => {
 
   const sendLocations = async () => {
     try {
-      const response = await axios.post('http://192.168.2.233:3000/api/locations', {
+        const response = await axios.post('http://192.168.56.1:3000/api/locations', {
         tripID,
         locations,
       });
@@ -104,6 +111,41 @@ const App = () => {
       console.error('Error sending locations:', error);
     }
   };
+
+    if (driving) {
+
+        return (
+            <View>
+                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
+                <View style={styles.container}>
+                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
+                </View>
+
+                <View style={styles.container}>
+                    <Button
+                        title={tracking ? "Stop Tracking" : "Start Tracking"}
+                        onPress={handleTracking} // Ensure handleTracking is called on button press
+                    />
+                    <Text style={tracking ? styles.whiteText : styles.whiteText}>
+                        {tracking ? "Tracking is ON" : "Tracking is OFF"}
+                    </Text>
+                    <LocationComponent />
+                </View>
+            </View>
+
+        );
+    }
+    else {
+        return (
+            <View>
+                {/*<Button title={tracking ? "Stop Tracking" : "Start Tracking"} onPress={tracking ? stopTracking : startTracking} />*/}
+                <View style={styles.container}>
+                    <Button title={driving ? "End Drive" : "Start Drive"} onPress={driving ? endDrive : startDrive} color="#007bff" />
+                </View>
+            </View>
+        );
+    }
+
 
   return (
     <View style={styles.container}>
