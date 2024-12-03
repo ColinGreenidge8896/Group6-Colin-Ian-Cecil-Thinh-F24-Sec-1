@@ -21,11 +21,14 @@ const SpeedAndAccelerationComponent = ({ currentLocation }) => {
 
     const getAcceleration = async () => {
         if (lastLocation) {
-            await sleep(5000); // Wait for 5 seconds
-            const speed1 = getSpeed(lastLocation, currentLocation);
-            await sleep(5000); // Wait for 5 seconds
-            const speed2 = getSpeed(lastLocation, currentLocation);
-            const calculatedAcceleration = (speed2 - speed1) / 5;
+            const speed = getSpeed(lastLocation, currentLocation);
+            const time = 10;
+            const kilometersPerDegree = 0.009;
+            const distance = Math.sqrt(
+                Math.pow((lastLocation.latitude / kilometersPerDegree - currentLocation.latitude / kilometersPerDegree), 2) +
+                Math.pow((lastLocation.longitude / kilometersPerDegree - currentLocation.longitude / kilometersPerDegree), 2)
+            );
+            const calculatedAcceleration = 2 * (distance - speed) / (time ^ 2);
             console.log('Acceleration =', calculatedAcceleration, 'km/h/s');
             setAcceleration(calculatedAcceleration);
         }
