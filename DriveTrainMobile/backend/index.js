@@ -34,19 +34,34 @@ app.get('/', (req, res) => {
     
 });
 
-// Endpoint to start a new trip
-app.post('/api/start-trip', (req, res) => {
-  const userID = req.body.userID; // Get the userID from the request body
-  const query = 'INSERT INTO trip (userID) VALUES (?)'; // SQL query to insert a new trip
+// Endpoint to create a new user
+app.post('/api/create-user', (req, res) => {
+  const { name, DriverScore } = req.body;
+  const query = 'INSERT INTO users (name, DriverScore) VALUES (?, ?)';
 
-  // Execute the query
-  db.query(query, [userID], (err, result) => {
+  db.query(query, [name, DriverScore], (err, result) => {
     if (err) {
-      console.error('Error starting trip:', err); // Log any errors
-      res.status(500).send('Error starting trip'); // Send error response
+      console.error('Error creating user:', err);
+      res.status(500).send('Error creating user');
       return;
     }
-    res.json({ tripID: result.insertId }); // Send the new tripID in the response
+    res.json({ userID: result.insertId, message: 'User created successfully' });
+  });
+});
+
+// Endpoint to start a new trip
+app.post('/api/start-trip', (req, res) => {
+  const userID = req.body.userID;
+
+  const query = 'INSERT INTO trip (userID) VALUES (?)';
+
+  db.query(query, [userID], (err, result) => {
+    if (err) {
+      console.error('Error starting trip:', err);
+      res.status(500).send('Error starting trip');
+      return;
+    }
+    res.json({ tripID: result.insertId });
   });
 });
 
@@ -69,45 +84,39 @@ const calculateDrivingScore = (locations) => {
 
 // Endpoint to store locations, speed, and acceleration data
 app.post('/api/locations', (req, res) => {
-  const { tripID, locations } = req.body; // Get tripID and locations from the request body
+  const { tripID, locations } = req.body;
 
-  // SQL query to insert locations
-  const locationQuery = 'INSERT INTO locations ( latitude, longitude, timestamp) VALUES ?';
-  const locationValues = locations.map((loc) => [loc.latitude, loc.longitude, new Date(loc.timestamp)]);
+  const locationQuery = 'INSERT INTO locations (tripID, latitude, longitude, timestamp) VALUES ?';
+  const locationValues = locations.map((loc) => [tripID, loc.latitude, loc.longitude, new Date(loc.timestamp)]);
 
-  // Execute the query to insert locations
   db.query(locationQuery, [locationValues], (err, result) => {
     if (err) {
-      console.error('Error inserting locations:', err); // Log any errors
-      res.status(500).send('Error inserting locations'); // Send error response
+      console.error('Error inserting locations:', err);
+      res.status(500).send('Error inserting locations');
       return;
     }
 
-    // Prepare values for speed and acceleration tables
     const speedValues = locations.map((loc) => [tripID, new Date(loc.timestamp), loc.speed, 60]);
     const accelerationValues = locations.map((loc) => [tripID, new Date(loc.timestamp), loc.acceleration]);
 
-    // SQL queries to insert speed and acceleration data
     const speedQuery = 'INSERT INTO speed (tripID, time, speed, speed_limit) VALUES ?';
     const accelerationQuery = 'INSERT INTO acceleration (tripID, time, acceleration) VALUES ?';
 
-    // Execute the query to insert speed data
     db.query(speedQuery, [speedValues], (err) => {
       if (err) {
-        console.error('Error inserting speed data:', err); // Log any errors
-        res.status(500).send('Error inserting speed data'); // Send error response
+        console.error('Error inserting speed data:', err);
+        res.status(500).json({ success: false, message: 'Error inserting speed data' });
         return;
       }
 
-      // Execute the query to insert acceleration data
       db.query(accelerationQuery, [accelerationValues], (err) => {
         if (err) {
-          console.error('Error inserting acceleration data:', err); // Log any errors
-          res.status(500).send('Error inserting acceleration data'); // Send error response
+          console.error('Error inserting acceleration data:', err);
+          res.status(500).json({ success: false, message: 'Error inserting acceleration data' });
           return;
         }
 
-        res.send('Locations, speed, and acceleration data saved to database'); // Send success response
+        res.json({ success: true, message: 'Locations, speed, and acceleration data saved to database' });
       });
     });
   });

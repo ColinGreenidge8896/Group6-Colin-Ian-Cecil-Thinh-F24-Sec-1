@@ -66,8 +66,11 @@ const App = () => {
   //http://localhost:8081/api/locations
   const startTrip = async () => {
     try {
-      const response = await axios.post('http://192.168.2.233:3000/api/start-trip', { userID: 1 });
-      return response.data.tripID;
+      const userResponse = await axios.post('http://192.168.2.233:3000/api/create-user', { name: 'John Doe', DriverScore: 0 });
+      const userID = userResponse.data.userID;
+  
+      const tripResponse = await axios.post('http://192.168.2.233:3000/api/start-trip', { userID });
+      return tripResponse.data.tripID;
     } catch (error) {
       console.error('Error starting trip:', error);
     }
@@ -92,8 +95,8 @@ const App = () => {
         locations,
       });
       if (response.data.success) {
-        console.log('Locations saved:', response.data.insertedRows);
-        setLocations([]); // Clear the array after sending
+        console.log(response.data.message);
+        setLocations([]);
       } else {
         console.error('Failed to save locations');
       }
@@ -106,7 +109,7 @@ const App = () => {
     <View style={styles.container}>
       <Button
         title={tracking ? "Stop Tracking" : "Start Tracking"}
-        onPress={() => setTracking(!tracking)}
+        onPress={handleTracking} // Ensure handleTracking is called on button press
       />
       <Text style={tracking ? styles.whiteText : styles.whiteText}>
         {tracking ? "Tracking is ON" : "Tracking is OFF"}
